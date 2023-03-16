@@ -6,54 +6,19 @@ import math
 
 random.seed(a='qwerty', version=2)
 
-def cloud_generator(surface, max_x , max_y, max_z, r, num_points):
-    x=[]
-    y=[]
-    z=[]
-    match surface:
-        # generowanie chmury punktów w plaszczyznie x - y
-        case 'horizontal':
-            for i in range(num_points):
-                x.append(random.random()*max_x)
-                y.append(random.random()*max_y)
-                z.append(0)
-            points = zip(x, y, z)
-            return points
-        # generowanie chmury punktów w plaszczyznie x - z
-        case 'vertical':
-            for i in range(num_points):
-                x.append(random.random()*max_x)
-                y.append(0)
-                z.append(random.random()*max_z)
-            points = zip(x, y, z)
-            return points
-        # generowanie chmury punktów w ksztalcie cylindra
-        case 'cylinder':
-            for i in range(num_points):
-                degree=random.random()*360
-                x.append(r*math.cos(math.radians(degree)))
-                y.append(r*math.sin(math.radians(degree)))
-                z.append(random.random()*max_z)
-            points = zip(x, y, z)
-            return points
-        # w przypadku zlego parametru surface wyrzuca chmure o parametrach 0,0,0
-        case _:
-            points = zip(x, y, z)
-            return points
 
-# To samo co wyzej tylko razem
 def three_cloud_generator(max_x , max_y, max_z, r, num_points):
     x = []
     y = []
     z = []
     for i in range(num_points):
         x.append(10+random.random() * max_x)
-        y.append(10+random.random() * max_y)
+        y.append(10+random.random() * max_y-100)
         z.append(0)
 
     for i in range(num_points):
         x.append(random.random() * max_x)
-        y.append(0)
+        y.append(50)
         z.append(random.random() * max_z)
 
     for i in range(num_points):
@@ -61,7 +26,9 @@ def three_cloud_generator(max_x , max_y, max_z, r, num_points):
         x.append(r * math.cos(math.radians(degree))-30)
         y.append(r * math.sin(math.radians(degree)))
         z.append(random.random() * max_z)
-
+    x.pop(0)
+    y.pop(0)
+    z.pop(0)
     points = zip(x, y, z)
     return points
 
