@@ -1,5 +1,4 @@
 
-from scipy.stats import norm
 from _csv import writer
 import random
 import math
