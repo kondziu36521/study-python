@@ -5,11 +5,11 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn.metrics import accuracy_score
 
 # wczytanie pliku CSV
-df = pd.read_csv(r'C:\Users\33kon\PycharmProjects\study-python\Python\Teksture_1_concrete\concretecsv.csv', usecols=[0])
+df = pd.read_csv(r'/Python/Teksture_1_concrete/concretecsv.csv', usecols=[0])
 
 y = np.ravel(df.values.tolist())
 
-df = pd.read_csv(r'C:\Users\33kon\PycharmProjects\study-python\Python\Teksture_1_concrete\concretecsv.csv', usecols=[3, 4, 5, 6, 7, 8])
+df = pd.read_csv(r'/Python/Teksture_1_concrete/concretecsv.csv', usecols=[3, 4, 5, 6, 7, 8])
 
 x = df.values.tolist()
 
@@ -27,11 +27,11 @@ accuracy = accuracy_score(y_test, y_pred)
 print(f"Dokładność klasyfikacji dla concrete: {accuracy:.2f}")
 
 # wczytanie pliku CSV
-df = pd.read_csv(r'C:\Users\33kon\PycharmProjects\study-python\Python\Teksture_2_oak_wood\woodcsv.csv', usecols=[0])
+df = pd.read_csv(r'/Python/Teksture_2_oak_wood/woodcsv.csv', usecols=[0])
 
 y = np.ravel(df.values.tolist())
 
-df = pd.read_csv(r'C:\Users\33kon\PycharmProjects\study-python\Python\Teksture_2_oak_wood\woodcsv.csv', usecols=[3, 4, 5, 6, 7, 8])
+df = pd.read_csv(r'/Python/Teksture_2_oak_wood/woodcsv.csv', usecols=[3, 4, 5, 6, 7, 8])
 
 x = df.values.tolist()
 
@@ -49,11 +49,11 @@ accuracy = accuracy_score(y_test, y_pred)
 print(f"Dokładność klasyfikacji dla wood: {accuracy:.2f}")
 
 # wczytanie pliku CSV
-df = pd.read_csv(r'C:\Users\33kon\PycharmProjects\study-python\Python\Teksture_3_brick\brickcsv.csv', usecols=[0])
+df = pd.read_csv(r'/Python/Teksture_3_brick/brickcsv.csv', usecols=[0])
 
 y = np.ravel(df.values.tolist())
 
-df = pd.read_csv(r'C:\Users\33kon\PycharmProjects\study-python\Python\Teksture_3_brick\brickcsv.csv', usecols=[3, 4, 5, 6, 7, 8])
+df = pd.read_csv(r'/Python/Teksture_3_brick/brickcsv.csv', usecols=[3, 4, 5, 6, 7, 8])
 
 x = df.values.tolist()
 
